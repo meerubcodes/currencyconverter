@@ -47,7 +47,7 @@ btn.addEventListener("click" , async (evt)=>{
     const data = await response.json();
     const rate = data[from.value.toLowerCase()][to.value.toLowerCase()]
     console.log(rate)
-    let finalAmt = amtVal*rate;
+    let finalAmt = (amtVal * rate).toFixed(2);
     console.log(finalAmt)
     msg.innerText = `${amtVal} ${from.value} = ${finalAmt} ${to.value}`
 })
